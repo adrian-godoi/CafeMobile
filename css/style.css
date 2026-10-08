@@ -159,3 +159,166 @@ main {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ---------- Telas e abas de navegação ---------- */
+main {
+  padding-bottom: 90px;
+  /* espaço para a barra de abas */
+}
+
+.tela h2 {
+  margin-bottom: 12px;
+}
+
+.abas {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: #fff;
+  border-top: 1px solid #eadfd3;
+  padding-bottom: env(safe-area-inset-bottom);
+  /* iPhone com "barrinha" */
+}
+
+.aba {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 0 10px;
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  color: var(--cor-texto-suave);
+  cursor: pointer;
+}
+
+.aba span {
+  font-size: 0.75rem;
+}
+
+.aba.ativa {
+  color: var(--cor-principal);
+  font-weight: bold;
+}
+
+.contador {
+  position: absolute;
+  top: 4px;
+  left: 55%;
+  min-width: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: #c0392b;
+  color: #fff;
+  font-size: 0.7rem !important;
+  line-height: 20px;
+}
+
+/* ---------- Pedido ---------- */
+.lista-pedido {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.item-pedido {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: var(--cor-card);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.item-pedido .nome {
+  flex: 1;
+}
+
+.item-pedido small {
+  display: block;
+  color: var(--cor-texto-suave);
+}
+
+.btn-qtd {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--cor-principal);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--cor-principal);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.vazio {
+  padding: 24px;
+  text-align: center;
+  color: var(--cor-texto-suave);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.btn-principal,
+.btn-secundario {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--raio);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.btn-principal {
+  border: none;
+  background: var(--cor-principal);
+  color: #fff;
+}
+
+.btn-secundario {
+  border: 2px solid var(--cor-principal);
+  background: transparent;
+  color: var(--cor-principal);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------- Aviso rápido (toast) ---------- */
+.aviso {
+  position: fixed;
+  left: 50%;
+  bottom: 90px;
+  transform: translate(-50%, 20px);
+  max-width: 90%;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--cor-texto);
+  color: var(--cor-fundo);
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.aviso.visivel {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}

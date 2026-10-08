@@ -16,20 +16,41 @@
   </header>
 
   <main>
-    <!-- data-categoria guarda a categoria de cada botão para o JavaScript ler -->
-    <div class="filtros">
-      <button class="filtro ativo" data-categoria="Todos">Todos</button>
-      <button class="filtro" data-categoria="Cafés">Cafés</button>
-      <button class="filtro" data-categoria="Geladas">Geladas</button>
-      <button class="filtro" data-categoria="Salgados">Salgados</button>
-      <button class="filtro" data-categoria="Doces">Doces</button>
-    </div>
+    <!-- ===== Tela 1: Cardápio ===== -->
+    <section id="tela-cardapio" class="tela">
+      <div class="filtros">
+        <button class="filtro ativo" data-categoria="Todos">Todos</button>
+        <button class="filtro" data-categoria="Cafés">Cafés</button>
+        <button class="filtro" data-categoria="Geladas">Geladas</button>
+        <button class="filtro" data-categoria="Salgados">Salgados</button>
+        <button class="filtro" data-categoria="Doces">Doces</button>
+      </div>
+      <div id="lista-produtos" class="lista-produtos"></div>
+    </section>
 
-    <!-- Agora vazia: o JavaScript preenche com os produtos de dados.js -->
-    <div id="lista-produtos" class="lista-produtos"></div>
+    <!-- ===== Tela 2: Pedido (começa escondida com "hidden") ===== -->
+    <section id="tela-pedido" class="tela" hidden>
+      <h2>Seu pedido</h2>
+      <ul id="lista-pedido" class="lista-pedido"></ul>
+      <div class="total">
+        <span>Total</span>
+        <strong id="total-pedido">R$ 0,00</strong>
+      </div>
+      <button id="btn-finalizar" class="btn-principal">Finalizar pedido</button>
+    </section>
   </main>
 
-  <!-- A ordem importa: primeiro os dados, depois o código que usa os dados -->
+  <!-- ===== Barra de abas, fixa embaixo, como nos apps ===== -->
+  <nav class="abas">
+    <button class="aba ativa" data-tela="tela-cardapio">☕<span>Cardápio</span></button>
+    <button class="aba" data-tela="tela-pedido">🧾<span>Pedido</span>
+      <span id="contador-pedido" class="contador" hidden>0</span>
+    </button>
+  </nav>
+
+  <!-- Mensagem rápida que aparece e some (toast) -->
+  <div id="aviso" class="aviso" role="status"></div>
+
   <script src="js/dados.js"></script>
   <script src="js/app.js"></script>
 </body>
