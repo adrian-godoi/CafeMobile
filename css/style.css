@@ -1,0 +1,151 @@
+/* ==========================================================
+   Café Mobile - estilos
+   Mobile-first: escrevemos primeiro para a tela do celular.
+   ========================================================== */
+
+/* Variáveis de cor: mude aqui para personalizar o app inteiro */
+:root {
+  --cor-principal: #6f4e37;   /* marrom café */
+  --cor-destaque: #d4a373;    /* caramelo */
+  --cor-fundo: #fff8f0;       /* creme */
+  --cor-card: #ffffff;
+  --cor-texto: #2b2118;
+  --cor-texto-suave: #7a6a5c;
+  --raio: 14px;
+  --sombra: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Faz padding e borda contarem dentro da largura */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.4;
+}
+
+main {
+  padding: 16px;
+  max-width: 600px;     /* no computador, não fica largo demais */
+  margin: 0 auto;
+}
+
+/* ---------- Topo ---------- */
+.topo {
+  position: sticky;      /* fica preso no topo ao rolar */
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--cor-principal);
+  color: #fff;
+}
+
+.topo h1 {
+  font-size: 1.3rem;
+}
+
+/* ---------- Filtros de categoria ---------- */
+.filtros {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;      /* rolagem lateral no celular */
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.filtro {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border: 1px solid var(--cor-principal);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cor-principal);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.filtro.ativo {
+  background: var(--cor-principal);
+  color: #fff;
+}
+
+/* ---------- Cards de produto ---------- */
+.lista-produtos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--cor-card);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.card-emoji {
+  font-size: 2.4rem;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cor-fundo);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.card-info {
+  flex: 1;               /* ocupa o espaço que sobrar */
+}
+
+.card-info h3 {
+  font-size: 1.05rem;
+}
+
+.card-info p {
+  font-size: 0.85rem;
+  color: var(--cor-texto-suave);
+}
+
+.card-info strong {
+  color: var(--cor-principal);
+}
+
+.btn-adicionar {
+  width: 44px;           /* 44px = tamanho mínimo confortável para o dedo */
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: var(--cor-destaque);
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btn-adicionar:active {
+  transform: scale(0.9); /* "afunda" ao tocar */
+}
+
+/* Telas maiores: dois cards por linha */
+@media (min-width: 700px) {
+  main {
+    max-width: 900px;
+  }
+  .lista-produtos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

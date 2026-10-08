@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Sem esta linha, o celular mostra a página "encolhida", como no computador -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Cor da barra do navegador no Android -->
+  <meta name="theme-color" content="#6f4e37">
+  <title>Café Mobile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <h1>☕ Café Mobile</h1>
+  </header>
+
+  <main>
+    <!-- Filtros de categoria (no dia 2 eles vão funcionar) -->
+    <div class="filtros">
+      <button class="filtro ativo">Todos</button>
+      <button class="filtro">Cafés</button>
+      <button class="filtro">Geladas</button>
+      <button class="filtro">Salgados</button>
+      <button class="filtro">Doces</button>
+    </div>
+
+    <!-- Lista de produtos: por enquanto escrita "na mão" -->
+    <div class="lista-produtos">
+
+      <article class="card">
+        <div class="card-emoji">☕</div>
+        <div class="card-info">
+          <h3>Espresso</h3>
+          <p>Café curto e encorpado</p>
+          <strong>R$ 6,00</strong>
+        </div>
+        <button class="btn-adicionar">+</button>
+      </article>
+
+      <article class="card">
+        <div class="card-emoji">☕</div>
+        <div class="card-info">
+          <h3>Cappuccino</h3>
+          <p>Espresso, leite vaporizado e espuma</p>
+          <strong>R$ 9,50</strong>
+        </div>
+        <button class="btn-adicionar">+</button>
+      </article>
+
+      <article class="card">
+        <div class="card-emoji">🧀</div>
+        <div class="card-info">
+          <h3>Pão de queijo</h3>
+          <p>Porção com 4 unidades</p>
+          <strong>R$ 7,00</strong>
+        </div>
+        <button class="btn-adicionar">+</button>
+      </article>
+
+      <article class="card">
+        <div class="card-emoji">🍰</div>
+        <div class="card-info">
+          <h3>Bolo de cenoura</h3>
+          <p>Fatia com cobertura de chocolate</p>
+          <strong>R$ 8,00</strong>
+        </div>
+        <button class="btn-adicionar">+</button>
+      </article>
+
+    </div>
+  </main>
+
+</body>
+</html>
