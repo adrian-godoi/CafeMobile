@@ -5,9 +5,12 @@
 
 /* Variáveis de cor: mude aqui para personalizar o app inteiro */
 :root {
-  --cor-principal: #6f4e37;   /* marrom café */
-  --cor-destaque: #d4a373;    /* caramelo */
-  --cor-fundo: #fff8f0;       /* creme */
+  --cor-principal: #6f4e37;
+  /* marrom café */
+  --cor-destaque: #d4a373;
+  /* caramelo */
+  --cor-fundo: #fff8f0;
+  /* creme */
   --cor-card: #ffffff;
   --cor-texto: #2b2118;
   --cor-texto-suave: #7a6a5c;
@@ -31,13 +34,15 @@ body {
 
 main {
   padding: 16px;
-  max-width: 600px;     /* no computador, não fica largo demais */
+  max-width: 600px;
+  /* no computador, não fica largo demais */
   margin: 0 auto;
 }
 
 /* ---------- Topo ---------- */
 .topo {
-  position: sticky;      /* fica preso no topo ao rolar */
+  position: sticky;
+  /* fica preso no topo ao rolar */
   top: 0;
   z-index: 10;
   display: flex;
@@ -56,7 +61,8 @@ main {
 .filtros {
   display: flex;
   gap: 8px;
-  overflow-x: auto;      /* rolagem lateral no celular */
+  overflow-x: auto;
+  /* rolagem lateral no celular */
   padding-bottom: 8px;
   margin-bottom: 12px;
 }
@@ -107,7 +113,8 @@ main {
 }
 
 .card-info {
-  flex: 1;               /* ocupa o espaço que sobrar */
+  flex: 1;
+  /* ocupa o espaço que sobrar */
 }
 
 .card-info h3 {
@@ -124,7 +131,8 @@ main {
 }
 
 .btn-adicionar {
-  width: 44px;           /* 44px = tamanho mínimo confortável para o dedo */
+  width: 44px;
+  /* 44px = tamanho mínimo confortável para o dedo */
   height: 44px;
   border: none;
   border-radius: 50%;
@@ -136,7 +144,8 @@ main {
 }
 
 .btn-adicionar:active {
-  transform: scale(0.9); /* "afunda" ao tocar */
+  transform: scale(0.9);
+  /* "afunda" ao tocar */
 }
 
 /* Telas maiores: dois cards por linha */
@@ -144,6 +153,7 @@ main {
   main {
     max-width: 900px;
   }
+
   .lista-produtos {
     display: grid;
     grid-template-columns: 1fr 1fr;
