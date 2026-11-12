@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="0" fill="#6f4e37"/>
+  <g fill="none" stroke="#fff8f0" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M116 210h250v112c0 64-52 116-116 116h-18c-64 0-116-52-116-116z" fill="#fff8f0" fill-opacity=".12"/>
+    <path d="M366 238h30c39 0 58 26 58 57s-22 58-62 58h-36"/>
+    <path d="M168 142c-20-26 15-36 0-66M250 142c-20-26 15-36 0-66M330 142c-20-26 15-36 0-66"/>
+    <path d="M96 448h320"/>
+  </g>
+  <text x="256" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="92" font-weight="700" fill="#fff8f0">CM</text>
+</svg>
